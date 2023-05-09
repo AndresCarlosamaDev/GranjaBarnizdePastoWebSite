@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<header id="fh5co-header" class="fh5co-cover fh5co-cover-sm img_galeria" role="banner">
+	<div class="overlay"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2 text-center">
+				<div class="display-t">
+					<div class="display-tc animate-box" data-animate-effect="fadeIn">
+						<h1>Galería</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<div id="fh5co-product">
+	<div class="container">
+		<div class="row animate-box">
+			<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+				<h2>Conoce nuestros productos</h2>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+					been the industry's standard dummy text ever since the 1500s.</p>
+			</div>
+		</div>
+		<div class="row">
+
+			{% for producto in productos %}
+				
+			<div class="col-md-4 text-center animate-box">
+				<div class="product">
+					<div class="product-grid">
+						<div class="inner">
+							<p>
+								<a href="/prod_detalle/{{producto.id}}"  class="icon"><i class="icon-eye"></i></a>
+							</p>
+
+							<img src="{{ producto.imagenes.first.imagen.url }}">
+						</div>
+					</div>
+					<div class="desc">
+						<h3>{{ producto.nombre_producto }}</h3>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+
+		</div>
+	</div>
+</div>
+{% endblock content %}

@@ -1,0 +1,130 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div id="fh5co-product-prod">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1 animate-box">
+				<div class="owl-carousel owl-carousel-fullwidth prod-detail product-carousel">
+
+					{% for pro_ind in producto_ind.imagenes.all %}
+					<div class="item">
+						<div class="active text-center">
+							<img class="img_ind" src="{{ pro_ind.imagen.url }}" alt="user">
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+
+				<div class="row animate-box">
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+						<h2>Detalle de Producto</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- ---------- -->
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				<div class="fh5co-tabs animate-box">
+					<ul class="fh5co-tab-nav">
+						<li class="active"><a href="#" data-tab="1"><span class="icon visible-xs"><i
+										class="icon-file"></i></span><span class="hidden-xs">Descripción
+									General</span></a></li>
+						<li><a href="#" data-tab="2"><span class="icon visible-xs"><i
+										class="icon-bar-graph"></i></span><span
+									class="hidden-xs">Especificaciones</span></a></li>
+						<li><a href="#" data-tab="3"><span class="icon visible-xs"><i class="icon-star"></i></span><span
+									class="hidden-xs">Información Adicional</span></a></li>
+					</ul>
+
+					<!-- Tabs -->
+					<div class="fh5co-tab-content-wrap">
+
+						<div class="fh5co-tab-content tab-content active" data-tab-content="1">
+							<div class="col-md-10 col-md-offset-1">
+								<h2>Detalles del producto</h2>
+
+								{% if producto_ind.descripcion %}
+
+								<p>{{ producto_ind.descripcion }}</p>
+
+								{% endif %}
+
+							</div>
+						</div>
+
+						<div class="fh5co-tab-content tab-content" data-tab-content="2">
+							<div class="col-md-10 col-md-offset-1">
+								<h3>Especificaciones del Producto</h3>
+								{% if producto_ind.material and producto_ind.detalles %}
+									<ul>
+										<li>Materia prima <strong>{{ producto_ind.material }}</strong></li>
+										<li>Detalles del producto <strong>{{ producto_ind.detalles }}</strong></li>
+										<li>Pesos aproximado <strong>{{ producto_ind.peso }}</strong> kilogramos</li>
+									</ul>
+								{% endif %}
+							</div>
+						</div>
+
+						<div class="fh5co-tab-content tab-content" data-tab-content="3">
+							<div class="col-md-10 col-md-offset-1">
+								<h3>Informacion Adicional</h3>
+								<div class="feed">
+									<div>
+										<blockquote>
+											<p>Paragraph placeat quis fugiat provident veritatis quia iure a debitis
+												adipisci dignissimos consectetur magni quas eius nobis reprehenderit
+												soluta eligendi quo reiciendis fugit? Veritatis tenetur odio delectus
+												quibusdam officiis est.</p>
+										</blockquote>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- --------------- -->
+	</div>
+</div>
+
+
+<div id="fh5co-started">
+	<div class="container">
+		<div class="row animate-box">
+			<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+				<h2>Contacto</h2>
+				<p>Conocer la opinión de nuestros clientes es muy importante para nosotros, por ello extendemos la
+					invitación a escribirnos y conocer sobre la técnica y productos.</p>
+			</div>
+		</div>
+		<div class="row animate-box">
+			<div class="col-md-9 col-md-offset-3">
+				<form class="form-inline">
+					<div class="col-md-8 col-sm-12">
+						<div class="form-group">
+							<input type="text" class="form-control" id="nombre" placeholder="Nombre" name="nombre">
+						</div>
+						<div class="form-group">
+							<input type="email" class="form-control" id="email" placeholder="Email" name="email">
+						</div>
+						<div class="form-group">
+							<textarea class="form-control" rows="5" placeholder="Mensaje" name="mensaje"
+								required></textarea>
+						</div>
+						<div class="form-group">
+							<input type="submit" value="Enviar" class="btn btn-primary">
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock content %}

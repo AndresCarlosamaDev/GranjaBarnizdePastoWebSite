@@ -1,0 +1,235 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- BANNERS -->
+<aside id="fh5co-hero" class="js-fullheight">
+	<div class="flexslider js-fullheight">
+		<ul class="slides">
+			<li id="slideOne">
+				<div class="overlay-gradient"></div>
+				<div class="container">
+					<div class="col-md-6 col-md-offset-3 col-md-pull-3 js-fullheight slider-text">
+						<div class="slider-text-inner">
+							<div class="desc">
+								<!-- <span class="price">$800</span> -->
+								<h2>Hojas Mopa Mopa</h2>
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+									Lorem Ipsum has been the industry's standard dummy text ever since the
+									1500s.</p>
+								<!-- <p><a href="single.html" class="btn btn-primary btn-outline btn-lg">Purchase Now</a></p> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li id="slideTwo">
+				<div class="container">
+					<div class="col-md-6 col-md-offset-3 col-md-pull-3 js-fullheight slider-text">
+						<div class="slider-text-inner">
+							<div class="desc">
+								<!-- <span class="price">$530</span> -->
+								<h2>Centro de Mesa Tradicional</h2>
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+									Lorem Ipsum has been the industry's standard dummy text ever since the
+									1500s.</p>
+								<!-- <p><a href="single.html" class="btn btn-primary btn-outline btn-lg">Purchase Now</a></p> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li id="slideThree">
+				<div class="container">
+					<div class="col-md-6 col-md-offset-3 col-md-pull-3 js-fullheight slider-text">
+						<div class="slider-text-inner">
+							<div class="desc">
+								<!-- <span class="price">$750</span> -->
+								<h2>Mopa Mopa Trivial</h2>
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+									Lorem Ipsum has been the industry's standard dummy text ever since the
+									1500s.</p>
+								<!-- <p><a href="single.html" class="btn btn-primary btn-outline btn-lg">Purchase Now</a></p> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li id="slideFour">
+				<div class="container">
+					<div class="col-md-6 col-md-offset-3 col-md-pull-3 js-fullheight slider-text">
+						<div class="slider-text-inner">
+							<div class="desc">
+								<!-- <span class="price">$540</span> -->
+								<h2>Barnizorio</h2>
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+									Lorem Ipsum has been the industry's standard dummy text ever since the
+									1500s.</p>
+								<!-- <p><a href="single.html" class="btn btn-primary btn-outline btn-lg">Purchase Now</a></p> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</aside>
+
+<div id="fh5co-services" class="fh5co-bg-section">
+	<div class="container">
+		<div class="row">
+			<div class="text-center">
+				<div class="feature-center animate-box" data-animate-effect="fadeIn">
+					<span class="icon">
+						<i class="icon-heart2"></i>
+					</span>
+					<h2>Barniz de Pasto Patrimonio Cultural Inmaterial de la Humanidad</h2>
+					<h4>Gilberto Granja & Óscar O. Granja - Artesanos barniz de Pasto</h4>
+					<p><a href="/nosotros" class="btn btn-primary btn-outline">Conócenos</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- ------------SERVICIOS------------ -->
+<div id="fh5co-product">
+	<div class="container">
+		<div class="row animate-box">
+			<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+				<!-- <span>Cool Stuff</span> -->
+				<h2>Galería</h2>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+					been the industry's standard dummy text ever since the 1500s.</p>
+			</div>
+		</div>
+		<div class="row">
+
+
+			{% for producto in productos %}
+				
+			<div class="col-md-4 text-center animate-box">
+				<div class="product">
+					<div class="product-grid">
+						<div class="inner">
+							<p>
+								<a href="/prod_detalle/{{producto.id}}"  class="icon"><i class="icon-eye"></i></a>
+							</p>
+
+							<img src="{{ producto.imagenes.first.imagen.url }}">
+						</div>
+					</div>
+					<div class="desc">
+						<h3>{{ producto.nombre_producto }}</h3>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+
+			
+			<!-- <div class="col-md-4 text-center animate-box">
+				<div class="product">
+					<div class="product-grid" id="produc_1">
+						<div class="inner">
+							<p>
+								<a href="/prod_detalle" class="icon"><i class="icon-eye"></i></a>
+							</p>
+						</div>
+					</div>
+					<div class="desc">
+						<h3>Hojas Mopa Mopa</h3>
+					</div>
+				</div>
+			</div> -->
+
+
+			
+		</div>
+	</div>
+</div>
+<!-- ------------FIN SERVICIOS------------ -->
+
+
+<div id="fh5co-testimonial" class="fh5co-bg-section">
+	<div class="container">
+		<div class="row animate-box">
+			<div class="col-md-8 col-md-offset-2 text-center">
+				<!-- <span>Testimony</span> -->
+				<h2>Taller de Barniz de Pasto</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				<div class="row animate-box">
+					<div class="owl-carousel owl-carousel-fullwidth">
+						<div class="item">
+							<div class="testimony-slide active text-center">
+								<figure>
+									<img class="artesanos" src="{% static 'images/person_1.png' %}" alt="user">
+								</figure>
+								<span>Gilberto Granja</span>
+								<blockquote>ive the blind texts. Separated they live in Bookmarksgrove right at
+									the coast of the Semantics, a large language ocean.&rdquo;</p>
+								</blockquote>
+							</div>
+						</div>
+						<div class="item">
+							<div class="testimony-slide active text-center">
+								<figure>
+									<img class="artesanos" src="{% static 'images/person_2.png' %}" alt="user">
+								</figure>
+								<span>Óscar O. Granja Peña</span>
+								<blockquote>
+									<p>Hijo del maestro Gilberto continúa con el legado artesanal, explorando
+										alternativas de diseño, estéticas, formales y de aplicación de la
+										técnica.</p>
+								</blockquote>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="map">
+	<iframe style="border:0; width: 100%; height: 350px;"
+		src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d498.6171114868862!2d-77.2765409!3d1.2043774!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e2ed326bf498899%3A0x5098e6740d4f587a!2sBarniz%20de%20Pasto%20-%20Taller%20GRANJA!5e0!3m2!1ses!2sco!4v1680139951115!5m2!1ses!2sco"
+		frameborder="0" allowfullscreen></iframe>
+</div>
+
+<div id="fh5co-started">
+	<div class="container">
+		<div class="row animate-box">
+			<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+				<h2>Contacto</h2>
+				<p>Conocer la opinión de nuestros clientes es muy importante para nosotros, por ello extendemos
+					la invitación a escribirnos y conocer sobre la técnica y productos.</p>
+			</div>
+		</div>
+		<div class="row animate-box">
+			<div class="col-md-9 col-md-offset-3">
+				<form class="form-inline">
+					<div class="col-md-8 col-sm-12">
+						<div class="form-group">
+							<input type="text" class="form-control" id="nombre" placeholder="Nombre" name="nombre">
+						</div>
+						<div class="form-group">
+							<input type="email" class="form-control" id="email" placeholder="Email" name="email">
+						</div>
+						<div class="form-group">
+							<textarea class="form-control" rows="5" placeholder="Mensaje" name="mensaje"
+								required></textarea>
+						</div>
+						<div class="form-group">
+							<input type="submit" value="Enviar" class="btn btn-primary">
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<header id="fh5co-header" class="fh5co-cover fh5co-cover-sm img_contacto" role="banner">
+	<div class="overlay"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2 text-center">
+				<div class="display-t">
+					<div class="display-tc animate-box" data-animate-effect="fadeIn">
+						<h1>Contáctanos</h1>
+						<!-- <h2>Barniz de Pasto</h2> -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<div id="fh5co-contact">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-5 col-md-push-1 animate-box">
+
+				<div class="fh5co-contact-info">
+					<h3>Información de interes</h3>
+					<ul>
+						<li class="address">Cra. 15 # 16-15 - San Juan de Pasto<br>Nariño - Colombia</li>
+						<li class="phone">+57 315 424 1357</li>
+						<li class="email">barnizdepasto@gmail.com</li>
+						<li class="clock">Lunes a Viernes - 8:00 a.m. a 5:00 p.m.<br>Sábado 9:00 a.m. a 12:30
+							p.m.</li>
+					</ul>
+				</div>
+
+			</div>
+			<div class="col-md-6 animate-box">
+				<h3>Contáctanos</h3>
+				<form action="#">
+
+					<div class="row form-group">
+						<div class="col-md-12">
+							<input type="text" class="form-control" id="nombre" placeholder="Nombre" name="nombre">
+						</div>
+					</div>
+
+					<div class="row form-group">
+						<div class="col-md-12">
+							<input type="email" class="form-control" id="email" placeholder="Email" name="email">
+						</div>
+					</div>
+
+					<div class="row form-group">
+						<div class="col-md-12">
+							<textarea class="form-control" rows="5" placeholder="Mensaje" name="mensaje"
+								required></textarea>
+						</div>
+					</div>
+					<div class="form-group">
+						<input type="submit" value="Enviar" class="btn btn-primary">
+					</div>
+
+				</form>
+			</div>
+		</div>
+
+	</div>
+</div>
+{% endblock content %}
