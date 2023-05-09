@@ -106,7 +106,7 @@
 		<div class="row">
 
 
-			{% for producto in productos %}
+			<!-- {% for producto in productos %}
 				
 			<div class="col-md-4 text-center animate-box">
 				<div class="product">
@@ -124,28 +124,62 @@
 					</div>
 				</div>
 			</div>
-			{% endfor %}
+			{% endfor %} -->
 
-			<!-- ---------SOLO DE PRUEBA----- -->
 			
-			<!-- <div class="col-md-4 text-center animate-box">
+			<!-- ----------SOLO PRUEBA----------- -->
+			<div class="col-md-4 text-center animate-box">
 				<div class="product">
 					<div class="product-grid">
 						<div class="inner">
 							<p>
-								<a href="/prod_detalle/{{producto.id}}"  class="icon"><i class="icon-eye"></i></a>
+								<a href="/prod_detalle/1"  class="icon"><i class="icon-eye"></i></a>
 							</p>
 
-							<img src="{{ static 'images/prod_1.png' }}">
+							<img src="{% static 'images/prod_1.png' %}">
 						</div>
 					</div>
 					<div class="desc">
 						<h3>Hojas Mopa Mopa</h3>
 					</div>
 				</div>
-			</div> -->
+			</div>
 
-			<!-- ----------- -->
+			<div class="col-md-4 text-center animate-box">
+				<div class="product">
+					<div class="product-grid">
+						<div class="inner">
+							<p>
+								<a href="/prod_detalle/2"  class="icon"><i class="icon-eye"></i></a>
+							</p>
+
+							<img src="{% static 'images/prod_2.png' %}">
+						</div>
+					</div>
+					<div class="desc">
+						<h3>Platos</h3>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-4 text-center animate-box">
+				<div class="product">
+					<div class="product-grid">
+						<div class="inner">
+							<p>
+								<a href="/prod_detalle/3"  class="icon"><i class="icon-eye"></i></a>
+							</p>
+
+							<img src="{% static 'images/prod_5.png' %}">
+						</div>
+					</div>
+					<div class="desc">
+						<h3>Bargueño</h3>
+					</div>
+				</div>
+			</div>
+			<!-- --------------------------- -->
+
 			
 		</div>
 	</div>

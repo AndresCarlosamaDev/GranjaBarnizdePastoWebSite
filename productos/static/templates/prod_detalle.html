@@ -8,37 +8,33 @@
 			<div class="col-md-10 col-md-offset-1 animate-box">
 				<div class="owl-carousel owl-carousel-fullwidth prod-detail product-carousel">
 
-					{% for pro_ind in producto_ind.imagenes.all %}
+					<!-- {% for pro_ind in producto_ind.imagenes.all %}
 					<div class="item">
 						<div class="active text-center">
 							<img class="img_ind" src="{{ pro_ind.imagen.url }}" alt="user">
 						</div>
 					</div>
-					{% endfor %}
+					{% endfor %} -->
+					
+					<!-- ---------SOLO DE PRUEBA----- -->
+					<div class="item">
+						<div class="active text-center">
+							<img class="img_ind" src="{% static 'images/prod_1.png' %}" alt="user">
+						</div>
+					</div>
+					<div class="item">
+						<div class="active text-center">
+							<img class="img_ind" src="{% static 'images/prod_1.1.png' %}" alt="user">
+						</div>
+					</div>
+					<div class="item">
+						<div class="active text-center">
+							<img class="img_ind" src="{% static 'images/prod_1.2.png' %}" alt="user">
+						</div>
+					</div>
+					<!-- ------------------ -->
 				</div>
 
-
-
-					<!-- ---------SOLO DE PRUEBA----- -->
-					<!-- <div class="item">
-						<div class="active text-center">
-							<img class="img_ind" src="{{ static 'images/prod_1.png' }}" alt="user">
-						</div>
-					</div>
-					<div class="item">
-						<div class="active text-center">
-							<img class="img_ind" src="{{ static 'images/prod_1.1.png' }}" alt="user">
-						</div>
-					</div>
-					<div class="item">
-						<div class="active text-center">
-							<img class="img_ind" src="{{ static 'images/prod_1.2.png' }}" alt="user">
-						</div>
-					</div> -->
-					<!-- ------------------ -->
-
-
-				
 
 				<div class="row animate-box">
 					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
