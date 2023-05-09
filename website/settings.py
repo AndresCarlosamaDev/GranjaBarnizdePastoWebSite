@@ -81,27 +81,27 @@ WSGI_APPLICATION = 'website.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'barnizproductos',
-        'USER': 'root',
-        'PASSWORD': 'admin',
-        'HOST': 'localhost',
-        'PORT': 3306
-    }
-}
-
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'railway',
+#         'NAME': 'barnizproductos',
 #         'USER': 'root',
-#         'PASSWORD': '2MeZLJPJVNVES74Japq6',
-#         'HOST': 'containers-us-west-156.railway.app',
-#         'PORT': 6104
+#         'PASSWORD': 'admin',
+#         'HOST': 'localhost',
+#         'PORT': 3306
 #     }
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'railway',
+        'USER': 'root',
+        'PASSWORD': '2MeZLJPJVNVES74Japq6',
+        'HOST': 'containers-us-west-156.railway.app',
+        'PORT': 6104
+    }
+}
 
 
 # Password validation
